@@ -1,24 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eOM-Dq-r9K">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Focus Pocus-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PomodoroiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6a-dR-Uj3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="KAO-vW-N1u">
+                                        <rect key="frame" x="77" y="270" width="260" height="241"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-8h-pUl">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="55"/>
+                                                <color key="backgroundColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="ZXu-PM-0O7"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="wyg-pa-Jbk"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="FOCUS">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                    <color key="baseForegroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="TO6-eA-9fq" kind="show" identifier="ToCounter" id="c1R-k9-wiy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPC-gO-bDn">
+                                                <rect key="frame" x="0.0" y="93" width="260" height="55"/>
+                                                <color key="backgroundColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="OU8-OW-4YK"/>
+                                                    <constraint firstAttribute="height" constant="55" id="S0g-9D-Z2N"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="STATISTICS">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                    <color key="baseForegroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ele-bK-Sz8">
+                                                <rect key="frame" x="0.0" y="186" width="260" height="55"/>
+                                                <color key="backgroundColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="fGe-Ld-5wj"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="nNh-dL-UXB"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="SUPPORT">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                    <color key="baseForegroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KAO-vW-N1u" firstAttribute="top" secondItem="A6a-dR-Uj3" secondAttribute="top" constant="270" id="S4n-1s-qY9"/>
+                                    <constraint firstItem="KAO-vW-N1u" firstAttribute="centerX" secondItem="A6a-dR-Uj3" secondAttribute="centerX" id="ifU-6g-HZ8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A6a-dR-Uj3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1SV-eF-mQD"/>
+                            <constraint firstItem="A6a-dR-Uj3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Iaf-7K-XKq"/>
+                            <constraint firstAttribute="bottom" secondItem="A6a-dR-Uj3" secondAttribute="bottom" id="PBf-Ce-O5i"/>
+                            <constraint firstItem="A6a-dR-Uj3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="weM-56-qDd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Focus Pocus" largeTitleDisplayMode="always" id="zcL-j7-wKw">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="zoS-Ey-OEl">
+                            <color key="tintColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="83.035714285714278"/>
+        </scene>
+        <!--Counter Class-->
+        <scene sceneID="hQl-LF-xex">
+            <objects>
+                <viewController id="TO6-eA-9fq" customClass="CounterClass" customModule="PomodoroiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nu4-qE-SVs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="GvG-RW-zMV">
+                                <rect key="frame" x="56.5" y="788" width="301" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuJ-rZ-XpH">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                        <color key="backgroundColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="VXf-Fp-UeN"/>
+                                            <constraint firstAttribute="height" constant="44" id="pgc-6g-31u"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RESET">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                            <color key="baseForegroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPressed:" destination="TO6-eA-9fq" eventType="touchUpInside" id="ubv-Vk-x9y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgF-so-kWv">
+                                        <rect key="frame" x="181" y="0.0" width="120" height="44"/>
+                                        <color key="backgroundColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="8wc-vO-Va6"/>
+                                            <constraint firstAttribute="height" constant="44" id="brp-HC-B0C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startPressed:" destination="TO6-eA-9fq" eventType="touchUpInside" id="mRA-ZE-VJh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73y-wv-bSg">
+                                <rect key="frame" x="99.5" y="340" width="215" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
+                                <color key="textColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ccd-Uz-0w8"/>
+                        <color key="backgroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GvG-RW-zMV" firstAttribute="centerX" secondItem="nu4-qE-SVs" secondAttribute="centerX" id="8tb-nG-4G7"/>
+                            <constraint firstItem="73y-wv-bSg" firstAttribute="top" secondItem="Ccd-Uz-0w8" secondAttribute="top" constant="200" id="Hel-Us-Slw"/>
+                            <constraint firstItem="Ccd-Uz-0w8" firstAttribute="bottom" secondItem="GvG-RW-zMV" secondAttribute="bottom" constant="30" id="OaJ-jI-fJr"/>
+                            <constraint firstItem="73y-wv-bSg" firstAttribute="centerX" secondItem="nu4-qE-SVs" secondAttribute="centerX" id="Xww-cj-sI6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="pgl-JK-NSj"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="73y-wv-bSg" id="Lke-0f-Ybg"/>
+                        <outlet property="resetLabel" destination="VuJ-rZ-XpH" id="px2-RZ-rwB"/>
+                        <outlet property="startLabel" destination="sgF-so-kWv" id="tpZ-K9-x56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9q-cg-7yL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.7391304347827" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ATo-hg-n9r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOM-Dq-r9K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="soC-c2-1Ul">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fct-MD-uta"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhZ-4a-4hF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
