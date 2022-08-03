@@ -1,49 +1,30 @@
 //
-//  CounterClass.swift
+//  BreakClass.swift
 //  PomodoroiOS
 //
-//  Created by Shahnaz EK on 14/07/22.
+//  Created by Shahnaz EK on 27/07/22.
 //
 
+import Foundation
 import UIKit
 import AVFoundation
 
 
-class CounterClass: UIViewController {
+class BreakClass : UIViewController {
     
 //    var player: AVAudioPlayer!
-
-    @IBOutlet weak var counterLabel: UILabel!
+    
+    @IBOutlet weak var breakCounter: UILabel!
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var resetLabel: UIButton!
     
     var timer = Timer()
     var isTimerStarted = false
-    var focusTime : Int = 1500
-
-            
+    var breakTime : Int = 300
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
-    
-
-    @IBAction func resetPressed(_ sender: UIButton) {
-        
-        timer.invalidate()
-        focusTime = 1500
-        isTimerStarted = false
-        counterLabel.text = "25 : 00"
-        startLabel.setImage(UIImage(named: "Play.png"), for: .normal)
-
-//        startLabel.setTitle("START", for: .normal)
-//        startLabel.titleLabel?.font = .systemFont(ofSize: 25.0, weight: .semibold)
-
-        
-    }
-    
-    
     
     @IBAction func startPressed(_ sender: UIButton) {
         
@@ -51,12 +32,11 @@ class CounterClass: UIViewController {
             
             startCounter()
             isTimerStarted = true
+            startLabel.setTitle("PAUSE", for: .normal)
             sender.setImage(UIImage(named: "Pause.png"), for: .normal)
 
-//            startLabel.setTitle("PAUSE", for: .normal)
 //            startLabel.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
 
-            
         } else {
             
             timer.invalidate()
@@ -65,10 +45,26 @@ class CounterClass: UIViewController {
             sender.setImage(UIImage(named: "Resume.png"), for: .normal)
 
 //            startLabel.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
-
             
         }
+        
     }
+    
+    
+    @IBAction func resetPressed(_ sender: UIButton) {
+        
+        timer.invalidate()
+        breakTime = 300
+        isTimerStarted = false
+        breakCounter.text = "05 : 00"
+        startLabel.setImage(UIImage(named: "Play.png"), for: .normal)
+        
+//        startLabel.setTitle("START", for: .normal)
+//        startLabel.titleLabel?.font = .systemFont(ofSize: 25.0, weight: .semibold)
+        
+    }
+    
+    
     
     func startCounter() {
         
@@ -78,18 +74,18 @@ class CounterClass: UIViewController {
     
     @objc func updateCounter() {
         
-        focusTime -= 1
-        counterLabel.text = formatCounter()
+        breakTime -= 1
+        breakCounter.text = formatCounter()
 //        playSound()
         
-        if counterLabel.text == "00 : 00" {
+        if breakCounter.text == "00 : 00" {
             
             timer.invalidate()
-            focusTime = 1500
+            breakTime = 300
             isTimerStarted = false
-            counterLabel.text = "25 : 00"
+            breakCounter.text = "05 : 00"
             startLabel.setImage(UIImage(named: "Play.png"), for: .normal)
-
+            
 //            startLabel.setTitle("START", for: .normal)
 //            startLabel.titleLabel?.font = .systemFont(ofSize: 25.0, weight: .semibold)
             
@@ -99,8 +95,8 @@ class CounterClass: UIViewController {
     
     func formatCounter() -> String {
         
-        let minutes = Int(focusTime) / 60 % 60
-        let seconds = Int(focusTime) % 60
+        let minutes = Int(breakTime) / 60 % 60
+        let seconds = Int(breakTime) % 60
         return String(format : "%02i : %02i", minutes, seconds)
     }
     
@@ -112,9 +108,3 @@ class CounterClass: UIViewController {
 //    }
     
 }
-
-
-// change the button titles to images in the counter
-// add different sound when the focus time has ended and marks the beginning of the break time
-// add 5 minute break once the counter reaches 00 : 00
-// create another function for break and then call the function when the timer hits 00 : 00

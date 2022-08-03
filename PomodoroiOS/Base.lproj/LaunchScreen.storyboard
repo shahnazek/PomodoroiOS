@@ -15,16 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pomodoro" translatesAutoresizingMaskIntoConstraints="NO" id="agh-sA-soT">
-                                <rect key="frame" x="87" y="148" width="240" height="600"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Pocus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4If-bZ-aOH">
+                                <rect key="frame" x="61" y="418" width="292" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.72042375800000003" green="0.162499845" blue="0.1650228202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.95233684780000005" green="0.85380339620000001" blue="0.81957250829999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="agh-sA-soT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NUC-Sk-r7q"/>
-                            <constraint firstItem="agh-sA-soT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="PnP-oP-SzD"/>
-                            <constraint firstItem="agh-sA-soT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jdP-Fj-JvV"/>
+                            <constraint firstItem="4If-bZ-aOH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2o7-n8-5eg"/>
+                            <constraint firstItem="4If-bZ-aOH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Kok-fz-ku7"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -33,7 +35,4 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Pomodoro" width="600" height="600"/>
-    </resources>
 </document>

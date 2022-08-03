@@ -14,6 +14,7 @@
 		E701AD20287B4AD2005C4151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E701AD1F287B4AD2005C4151 /* Assets.xcassets */; };
 		E701AD23287B4AD2005C4151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E701AD21287B4AD2005C4151 /* LaunchScreen.storyboard */; };
 		E70B6E49287F51E100C6F32B /* CounterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70B6E48287F51E100C6F32B /* CounterClass.swift */; };
+		E7230B8E2891AD7000C88B36 /* BreakClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7230B8D2891AD7000C88B36 /* BreakClass.swift */; };
 		E77E8E3A2880A91A00876B2C /* clocktick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E77E8E392880A91A00876B2C /* clocktick.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		E701AD22287B4AD2005C4151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E701AD24287B4AD2005C4151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70B6E48287F51E100C6F32B /* CounterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterClass.swift; sourceTree = "<group>"; };
+		E7230B8D2891AD7000C88B36 /* BreakClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakClass.swift; sourceTree = "<group>"; };
 		E77E8E392880A91A00876B2C /* clocktick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clocktick.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			children = (
 				E701AD1A287B4ACE005C4151 /* ViewController.swift */,
 				E70B6E48287F51E100C6F32B /* CounterClass.swift */,
+				E7230B8D2891AD7000C88B36 /* BreakClass.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E701AD1B287B4ACE005C4151 /* ViewController.swift in Sources */,
+				E7230B8E2891AD7000C88B36 /* BreakClass.swift in Sources */,
 				E701AD17287B4ACE005C4151 /* AppDelegate.swift in Sources */,
 				E701AD19287B4ACE005C4151 /* SceneDelegate.swift in Sources */,
 				E70B6E49287F51E100C6F32B /* CounterClass.swift in Sources */,
